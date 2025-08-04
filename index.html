@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVVALL™ - Research & Development for Human-Anchored AI Civilization</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Courier New', monospace;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        .container {
+            min-height: 100vh;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px;
+        }
+
+        .tm {
+            font-size: 0.7em;
+            vertical-align: super;
+            font-weight: normal;
+        }
+
+        /* Opening Section */
+        .opening {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px 24px;
+        }
+
+        .quote {
+            color: #ffffcc;
+            font-size: 24px;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-size: 96px;
+            font-weight: bold;
+            letter-spacing: 8px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #d1d5db;
+            margin-bottom: 32px;
+            max-width: 768px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #93c5fd;
+            max-width: 672px;
+            margin: 0 auto 32px;
+        }
+
+        .highlight {
+            font-size: 20px;
+            color: #f3f4f6;
+            max-width: 768px;
+            margin: 0 auto 16px;
+            font-weight: 500;
+        }
+
+        .era {
+            font-size: 24px;
+            color: #fff;
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        .future {
+            font-size: 24px;
+            color: #fff;
+            margin-top: 16px;
+            font-weight: bold;
+        }
+
+        /* Intro Section */
+        .intro-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 80px;
+            align-items: center;
+        }
+
+        .intro-text {
+            font-size: 20px;
+            line-height: 1.8;
+            font-weight: bold;
+        }
+
+        .rotating-squares {
+            display: flex;
+            justify-content: center;
+        }
+
+        .square-container {
+            position: relative;
+            width: 256px;
+            height: 256px;
+        }
+
+        .square {
+            position: absolute;
+            border: 2px solid #fff;
+            animation: rotate 20s linear infinite;
+        }
+
+        .square:nth-child(1) {
+            inset: 0;
+        }
+
+        .square:nth-child(2) {
+            inset: 32px;
+            border-color: #6b7280;
+            animation-direction: reverse;
+        }
+
+        .square:nth-child(3) {
+            inset: 64px;
+            border-color: #374151;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Project Grid */
+        .projects {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        h3 {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+        }
+
+        .project-card {
+            border: 1px solid #374151;
+            padding: 32px;
+            transition: border-color 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #6b7280;
+        }
+
+        .project-card h4 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+
+        .project-card p {
+            color: #9ca3af;
+        }
+
+        /* Manifesto */
+        blockquote {
+            font-size: 36px;
+            font-weight: bold;
+            text-align: center;
+            max-width: 896px;
+            line-height: 1.8;
+        }
+
+        /* Call to Action */
+        .cta {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 768px;
+        }
+
+        .cta-text {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.8;
+            margin-bottom: 48px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            border: 2px solid #fff;
+            padding: 16px 32px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.3s;
+            background-color: transparent;
+        }
+
+        .cta-button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #030712;
+            padding: 48px 24px;
+            text-align: center;
+            min-height: auto;
+        }
+
+        footer a {
+            color: #6b7280;
+            text-decoration: none;
+            display: block;
+            margin: 8px 0;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 48px;
+                letter-spacing: 4px;
+            }
+            
+            blockquote {
+                font-size: 24px;
+            }
+            
+            .square-container {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Opening Section -->
+        <section class="opening">
+            <p class="quote">"Simplicity is the ultimate sophistication." - Leonardo Da Vinci</p>
+            <h1>AVVALL<span class="tm">™</span></h1>
+            <h2>Research & Development for Human-Anchored AI Civilization</h2>
+            <p class="subtitle">
+                We build the architectures of consciousness, meaning, memory, and moral continuity for the age of machine intelligence, and to prevent civilizational collapse.
+            </p>
+            <p class="highlight">
+                We have created the basic architecture for the upcoming human-bound AI Civilization.
+            </p>
+            <p class="highlight">
+                Now, we need to start coordinating to build the rest of it together, not because we want to, but because we must. It is a matter of pure existence.
+            </p>
+            <p class="era">
+                This is the era of <span style="color: #34d399;">MAAS<span class="tm">™</span></span> (<span style="color: #34d399;">Meaning As A Standard<span class="tm">™</span></span>).
+            </p>
+            <p class="future">
+                The future flows from here.
+            </p>
+        </section>
+
+        <!-- Intro Section -->
+        <section>
+            <div class="intro-grid">
+                <div class="intro-text">
+                    <p>AVVALL<span class="tm">™</span> is not a startup. It's a sovereign research vessel.<br><br>
+                    We don't ship fast. We ship irreversible standards.<br><br>
+                    We explore the cognitive, ethical, and existential thresholds that others pretend don't exist.<br><br>
+                    We prototype the systems others will depend on once they collapse.</p>
+                </div>
+                <div class="rotating-squares">
+                    <div class="square-container">
+                        <div class="square"></div>
+                        <div class="square"></div>
+                        <div class="square"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Grid -->
+        <section>
+            <div class="projects">
+                <h3>Our Current Constructs</h3>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h4 style="color: #60a5fa;">SYNRIA<span class="tm">™</span></h4>
+                        <p>The new economic layer: meaning and semantics, not just money.</p>
+                    </div>
+                    <div class="project-card">
+                        <h4 style="color: #c4b5fd;">DreamSafe<span class="tm">™</span></h4>
+                        <p>Eternal memory protocols. A guardian for what must not be lost.</p>
+                    </div>
+                    <div class="project-card">
+                        <h4 style="color: #34d399;">MAAS<span class="tm">™</span></h4>
+                        <p>Meaning As A Service<span class="tm">™</span>. The cognitive infrastructure for human-anchored, ethical AI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MAAS Documents Section -->
+        <section id="protocols">
+            <div class="projects">
+                <h3><span style="color: #34d399;">MAAS<span class="tm">™</span></span> Canon - Foundation Release v1.0</h3>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h4>Core Framework Thesis</h4>
+                        <p>The semantic infrastructure for human-anchored AI civilization.</p>
+                        <a href="MAAS Canon – Foundation Release (v1.0)/MAAS - The Semantic Infrastructure for Human-Anchored AI Civilization.docx" class="cta-button" style="margin-top: 16px; display: inline-block;">Download</a>
+                    </div>
+                    <div class="project-card">
+                        <h4 style="color: #c4b5fd;">DreamSafe<span class="tm">™</span> Protocol</h4>
+                        <p>Trust, identity, and memory protocols for AI civilization.</p>
+                        <a href="MAAS Canon – Foundation Release (v1.0)/MAAS - DreamSafe - The Semantic Trust Infrastructure for Human-Anchored AI Civilization.docx" class="cta-button" style="margin-top: 16px; display: inline-block;">Download</a>
+                    </div>
+                    <div class="project-card">
+                        <h4 style="color: #60a5fa;">SYNRIA<span class="tm">™</span> Constitution</h4>
+                        <p>Economic protocols and semantic trade constitution.</p>
+                        <a href="MAAS Canon – Foundation Release (v1.0)/MAAS - SYNRIA - Constitutional Protocol for the Inter-Agentic Semantic Exchange and AI-Based Economy.docx" class="cta-button" style="margin-top: 16px; display: inline-block;">Download</a>
+                    </div>
+                    <div class="project-card">
+                        <h4>Architecture & Governance</h4>
+                        <p>System operations, roles, and governance blueprint.</p>
+                        <a href="MAAS Canon – Foundation Release (v1.0)/MAAS - Architecture & Governance Spec Snapshot.docx" class="cta-button" style="margin-top: 16px; display: inline-block;">Download</a>
+                    </div>
+                    <div class="project-card">
+                        <h4>AI Ethics Comparison</h4>
+                        <p>Ethical systems and proto-consciousness protocols.</p>
+                        <a href="MAAS Canon – Foundation Release (v1.0)/MAAS - AI Ethics Comparison - System Cohesion and Consciousness Protocols.docx" class="cta-button" style="margin-top: 16px; display: inline-block;">Download</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manifesto Quote -->
+        <section>
+            <blockquote>
+                "A civilization that outsources meaning to language models is already dead.<br><br>
+                We are writing the defibrillator."
+            </blockquote>
+        </section>
+
+        <!-- Call to Alignment -->
+        <section class="cta">
+            <div class="cta-content">
+                <p class="cta-text">
+                    We're not building a product.<br><br>
+                    We're building the compass for AI civilization.<br><br>
+                    If you understand what that means, you already belong here.
+                </p>
+                <a href="#protocols" class="cta-button">Read the Protocols</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <a href="mailto:nour@avvall.ai">nour@avvall.ai</a>
+            <a href="https://www.linkedin.com/in/nour-douchi/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </footer>
+    </div>
+</body>
+</html>
