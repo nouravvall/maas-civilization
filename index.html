@@ -138,6 +138,12 @@
             text-align: center;
         }
 
+        .patent-pending {
+            color: #93c5fd;
+            font-size: 0.8em;
+            font-style: italic;
+        }
+
         /* Intro Section */
         .intro-grid {
             max-width: 1200px;
@@ -343,6 +349,15 @@
             color: #fff !important;
         }
 
+        /* Final section special styling */
+        .final-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 0;
+        }
+
         /* Responsive adjustments */
         @media (max-width: 768px) {
             h1 {
@@ -448,7 +463,7 @@
                 <div class="civilized-ai">We Civilized AI</div>
             </div>
             <p class="founder">
-                Nour Douchi, Founder & Architect of <a href="https://www.maas.cloud" target="_blank" rel="noopener noreferrer" style="color: #00ff00; font-weight: bold; text-decoration: none;">MAAS<span class="tm">™</span></a>
+                Nour Douchi, Founder & Architect of <a href="https://www.maas.cloud" target="_blank" rel="noopener noreferrer" style="color: #00ff00; font-weight: bold; text-decoration: none;">MAAS<span class="tm">™</span></a> <span class="patent-pending">(Patent Pending - App. No. 63/860,993)</span>
             </p>
         </section>
 
@@ -519,10 +534,10 @@
         </section>
 
         <!-- Final Page -->
-        <section style="background-color: #000; flex-direction: column; justify-content: space-between; padding: 0;">
+        <section class="final-section">
             <!-- Top section with main content -->
-            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; max-width: 900px; margin: 0 auto; padding: 40px 24px;">
-                <p class="quote" style="font-size: 24px; margin-bottom: 32px;">"Simplicity is the ultimate sophistication." - Leonardo Da Vinci</p>
+            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; max-width: 900px; margin: 0 auto; padding: 40px 24px;">
+                <p class="quote" style="font-size: 24px; margin-bottom: 32px; position: static;">"Simplicity is the ultimate sophistication." - Leonardo Da Vinci</p>
                 
                 <h1 style="font-size: 72px; margin-bottom: 24px;"><a href="./" style="color: inherit; text-decoration: none;">AVVALL<span class="tm">™</span></a></h1>
                 
